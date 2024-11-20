@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ozma-app
+    env: docker
+    plan: starter
+    dockerComposeYaml: ./docker-compose.yml
+    envVars:
+      - key: KEYCLOAK_ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: DOMAIN
+        sync: false
